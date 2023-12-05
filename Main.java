@@ -18,6 +18,8 @@ public class Main {
             System.out.println(task);
         }
     }
+    private void removerTarefa(String task) {
+    }
 
     public static void main(String[] args) {
         Main toDoList = new Main();
@@ -27,7 +29,8 @@ public class Main {
             System.out.println("1. Adicionar tarefa");
             System.out.println("2. Marcar tarefa como concluída");
             System.out.println("3. Listar tarefas");
-            System.out.println("4. Sair");
+            System.out.println("4. Remover tarefa");
+            System.out.println("5. Sair");
             System.out.print("Escolha uma opção: ");
             int opcao = scanner.nextInt();
             scanner.nextLine();
@@ -47,6 +50,11 @@ public class Main {
                     toDoList.listarTasks();
                     break;
                 case 4:
+                    System.out.println("Digite a tarefa que deseja remover:");
+                    task = scanner.nextLine();
+                    toDoList.removerTarefa(task);
+                    break;
+                case 5:
                     System.exit(0);
             }
         }
